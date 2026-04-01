@@ -86,8 +86,8 @@ const Index = () => {
             <img
               src={logo}
               alt="Kundli AI Logo"
-              width={140}
-              height={140}
+              width={180}
+              height={180}
               className="mx-auto drop-shadow-2xl"
             />
           </div>
