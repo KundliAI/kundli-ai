@@ -119,7 +119,7 @@ const Index = () => {
       <section className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-purple opacity-50" />
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-gradient-gold">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-center mb-4 text-gradient-gold">
             What Can Kundli AI Do?
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
