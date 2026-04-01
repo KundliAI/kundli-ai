@@ -67,7 +67,9 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 
   .text-gradient-gold {
