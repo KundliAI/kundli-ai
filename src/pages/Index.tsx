@@ -52,7 +52,7 @@ const Index = () => {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-gold text-accent-foreground px-5 py-2.5 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
+            className="bg-gradient-gold text-accent-foreground px-5 py-2.5 rounded-full font-bold tracking-wide text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
           >
             <MessageCircle size={16} />
             Chat Now
