@@ -40,7 +40,7 @@ const TermsOfService = () => {
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">4. User Accounts & Data</h2>
-            <p>To use the Service, you interact with our WhatsApp chatbot. You may be asked to provide personal information such as your name, date of birth, time of birth, and place of birth. You are responsible for the accuracy of the information you provide. Your data is stored using Supabase cloud infrastructure. Please note that your data is <strong>not encrypted at the application level</strong>; however, Supabase provides industry-standard infrastructure security including encryption at rest and in transit at the infrastructure level.</p>
+            <p>To use the Service, you interact with our WhatsApp chatbot. You may be asked to provide personal information such as your name, date of birth, time of birth, and place of birth. You are responsible for the accuracy of the information you provide. Your data is stored using secure cloud infrastructure. Please note that your data is <strong>not encrypted at the application level</strong>; however, our cloud infrastructure provider implements industry-standard security including encryption at rest and in transit at the infrastructure level.</p>
           </section>
 
           <section>
