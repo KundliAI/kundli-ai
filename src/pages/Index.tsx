@@ -92,7 +92,7 @@ const Index = () => {
             />
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 text-gradient-gold leading-tight">
+          <h1 className="font-display text-6xl md:text-8xl font-black mb-6 text-gradient-gold leading-tight">
             Kundli AI
           </h1>
 
@@ -119,7 +119,7 @@ const Index = () => {
       <section className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-purple opacity-50" />
         <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-4 text-gradient-gold">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-center mb-4 text-gradient-gold">
             What Can Kundli AI Do?
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
@@ -135,10 +135,10 @@ const Index = () => {
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                   <feature.icon size={24} className="text-accent" />
                 </div>
-                <h3 className="font-display text-lg font-bold mb-3 text-foreground">
+                <h3 className="font-display text-xl font-bold mb-3 text-foreground">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -150,7 +150,7 @@ const Index = () => {
       {/* How It Works */}
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-16 text-gradient-gold">
+          <h2 className="font-display text-4xl md:text-5xl font-black text-center mb-16 text-gradient-gold">
             How It Works
           </h2>
 
@@ -176,7 +176,7 @@ const Index = () => {
       <section className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-purple opacity-60" />
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-gradient-gold">
+          <h2 className="font-display text-4xl md:text-5xl font-black mb-6 text-gradient-gold">
             Ready to Know Your Stars?
           </h2>
           <p className="text-foreground/70 mb-10 text-lg">
