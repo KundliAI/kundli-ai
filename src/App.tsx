@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/cosmic-companion">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
