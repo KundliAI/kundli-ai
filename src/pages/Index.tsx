@@ -176,7 +176,7 @@ const Index = () => {
       <section className="py-24 px-6 relative">
         <div className="absolute inset-0 bg-gradient-purple opacity-60" />
         <div className="container mx-auto max-w-2xl text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-gradient-gold">
+          <h2 className="font-display text-4xl md:text-5xl font-black mb-6 text-gradient-gold">
             Ready to Know Your Stars?
           </h2>
           <p className="text-foreground/70 mb-10 text-lg">
