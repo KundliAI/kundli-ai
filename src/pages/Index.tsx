@@ -1,6 +1,7 @@
 import { Star, Sparkles, Moon, Sun, Zap, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
+import logo from "@/assets/kundli-ai-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const WHATSAPP_LINK = "https://wa.me/YOUR_NUMBER_HERE";
