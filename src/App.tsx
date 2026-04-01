@@ -16,7 +16,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/cosmic-companion">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/terms" element={<TermsOfService />} />

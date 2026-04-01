@@ -84,7 +84,7 @@ const TermsOfService = () => {
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">10. Third-Party Services</h2>
-            <p>The Service operates on WhatsApp, which is owned by Meta Platforms, Inc. Your use of WhatsApp is subject to WhatsApp's own Terms of Service and Privacy Policy. We are not responsible for WhatsApp's practices, policies, or any issues arising from the WhatsApp platform. We also use Supabase for data storage and other third-party AI providers, each subject to their own terms.</p>
+            <p>The Service operates on WhatsApp, which is owned by Meta Platforms, Inc. Your use of WhatsApp is subject to WhatsApp's own Terms of Service and Privacy Policy. We are not responsible for WhatsApp's practices, policies, or any issues arising from the WhatsApp platform. We also use third-party cloud services for data storage and AI providers, each subject to their own terms.</p>
           </section>
 
           <section>
