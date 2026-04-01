@@ -1,4 +1,5 @@
 import { MessageCircle, Star, Sparkles, Moon, Sun, Zap } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/kundli-ai-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
