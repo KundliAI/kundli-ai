@@ -1,5 +1,6 @@
-import { MessageCircle, Star, Sparkles, Moon, Sun, Zap } from "lucide-react";
+import { Star, Sparkles, Moon, Sun, Zap, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logo from "@/assets/kundli-ai-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -45,7 +46,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Kundli AI" width={40} height={40} className="rounded-lg" />
+            <img src={logo} alt="Kundli AI" width={48} height={48} className="rounded-lg" />
             <span className="font-display text-xl text-gradient-gold font-bold">Kundli AI</span>
           </div>
           <a
@@ -54,7 +55,7 @@ const Index = () => {
             rel="noopener noreferrer"
             className="bg-gradient-gold text-accent-foreground px-5 py-2.5 rounded-full font-bold tracking-wide text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
           >
-            <MessageCircle size={16} />
+            <WhatsAppIcon size={18} />
             Chat Now
           </a>
         </div>
@@ -86,8 +87,8 @@ const Index = () => {
             <img
               src={logo}
               alt="Kundli AI Logo"
-              width={140}
-              height={140}
+              width={180}
+              height={180}
               className="mx-auto drop-shadow-2xl"
             />
           </div>
@@ -109,7 +110,7 @@ const Index = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-10 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform"
           >
-            <MessageCircle size={24} />
+            <WhatsAppIcon size={24} />
             Start Chatting on WhatsApp
           </a>
         </div>
@@ -188,7 +189,7 @@ const Index = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-10 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform"
           >
-            <MessageCircle size={24} />
+            <WhatsAppIcon size={24} />
             Chat with Kundli AI
           </a>
         </div>
@@ -198,7 +199,7 @@ const Index = () => {
       <footer className="border-t border-border/50 py-8 px-6">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Kundli AI" width={24} height={24} className="rounded" />
+            <img src={logo} alt="Kundli AI" width={36} height={36} className="rounded" />
             <span className="font-display text-gradient-gold">Kundli AI</span>
           </div>
           <div className="flex items-center gap-4">
