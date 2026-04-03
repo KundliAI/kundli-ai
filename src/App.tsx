@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/KundliAI">
+      <BrowserRouter basename="/kundli-ai">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
