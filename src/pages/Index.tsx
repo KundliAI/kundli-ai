@@ -207,7 +207,7 @@ const Index = () => {
             <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/account-deletion" className="hover:text-foreground transition-colors">Account Deletion</Link>
           </div>
-          <p>© {new Date().getFullYear()} Kundli AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} KundliAI. All rights reserved.</p>
         </div>
       </footer>
     </div>
