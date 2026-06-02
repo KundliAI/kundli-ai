@@ -8,6 +8,10 @@ import NotFound from "./pages/NotFound.tsx";
 import TermsOfService from "./pages/TermsOfService.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import AccountDeletion from "./pages/AccountDeletion.tsx";
+import AboutUs from "./pages/AboutUs.tsx";
+import Pricing from "./pages/Pricing.tsx";
+import RefundPolicy from "./pages/RefundPolicy.tsx";
+import ContactUs from "./pages/ContactUs.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
@@ -24,6 +28,10 @@ const App = () => (
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/account-deletion" element={<AccountDeletion />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/refund" element={<RefundPolicy />} />
+          <Route path="/contact" element={<ContactUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -10,7 +10,7 @@ const features = [
   {
     icon: Star,
     title: "Personalized Kundli",
-    description: "Get your detailed birth chart analysis powered by advanced AI and Vedic astrology.",
+    description: "Get your detailed birth chart analysis rooted in traditional Vedic Jyotish, powered by AI.",
   },
   {
     icon: Moon,
@@ -29,13 +29,13 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Instant Answers",
-    description: "Ask any astrology question and get instant, accurate answers on WhatsApp 24/7.",
+    title: "Astrology Guidance",
+    description: "Receive answers to your Vedic astrology questions — from planetary transits to auspicious timings — right on WhatsApp.",
   },
   {
     icon: MessageCircle,
     title: "Easy WhatsApp Chat",
-    description: "No app downloads needed. Just chat on WhatsApp like you would with a friend.",
+    description: "No app downloads needed. Just message on WhatsApp and receive your readings instantly.",
   },
 ];
 
@@ -46,8 +46,8 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Kundli AI" width={48} height={48} className="rounded-lg" />
-            <span className="font-display text-xl text-gradient-gold font-bold">Kundli AI</span>
+            <img src={logo} alt="KundliAI" width={48} height={48} className="rounded-lg" />
+            <span className="font-display text-xl text-gradient-gold font-bold">KundliAI</span>
           </div>
           <a
             href={WHATSAPP_LINK}
@@ -68,7 +68,7 @@ const Index = () => {
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-purple opacity-70" />
-        
+
         {/* Decorative stars */}
         {[...Array(20)].map((_, i) => (
           <div
@@ -86,7 +86,7 @@ const Index = () => {
           <div className="animate-float mb-8">
             <img
               src={logo}
-              alt="Kundli AI Logo"
+              alt="KundliAI Logo"
               width={180}
               height={180}
               className="mx-auto drop-shadow-2xl"
@@ -94,11 +94,11 @@ const Index = () => {
           </div>
 
           <h1 className="font-display text-6xl md:text-8xl font-black mb-6 text-gradient-gold leading-tight">
-            Kundli AI
+            KundliAI
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-4 leading-relaxed">
-            Your personal Vedic astrologer on WhatsApp. Get instant Kundli readings, horoscopes, and life guidance — powered by AI.
+            Your dedicated Vedic astrology service, delivered on WhatsApp. Personalized Kundli readings, horoscopes, and guidance — rooted in ancient Jyotish wisdom.
           </p>
           <p className="text-muted-foreground text-sm mb-10">
             No app downloads · Free to try · Available 24/7
@@ -111,7 +111,7 @@ const Index = () => {
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-10 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform"
           >
             <WhatsAppIcon size={24} />
-            Start Chatting on WhatsApp
+            Get Your Kundli on WhatsApp
           </a>
         </div>
       </section>
@@ -121,10 +121,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-purple opacity-50" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-display text-4xl md:text-5xl font-black text-center mb-4 text-gradient-gold">
-            What Can Kundli AI Do?
+            What KundliAI Offers
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
-            Ancient Vedic wisdom meets modern AI — right in your WhatsApp.
+            Ancient Jyotish wisdom, delivered straight to your WhatsApp.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -157,9 +157,9 @@ const Index = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             {[
-              { step: "1", title: "Open WhatsApp", desc: "Click the button below to start a chat" },
-              { step: "2", title: "Say Hello", desc: "Send your birth details to get started" },
-              { step: "3", title: "Get Insights", desc: "Receive your Kundli and predictions instantly" },
+              { step: "1", title: "Open WhatsApp", desc: "Tap the button to start a conversation with KundliAI" },
+              { step: "2", title: "Share Your Details", desc: "Provide your name, date, time, and place of birth" },
+              { step: "3", title: "Receive Your Reading", desc: "Get your personalized Kundli and astrological insights instantly" },
             ].map((item) => (
               <div key={item.step} className="text-center flex-1">
                 <div className="w-16 h-16 rounded-full bg-gradient-gold text-accent-foreground flex items-center justify-center text-2xl font-bold font-display mx-auto mb-4 glow-gold">
@@ -181,7 +181,7 @@ const Index = () => {
             Ready to Know Your Stars?
           </h2>
           <p className="text-foreground/70 mb-10 text-lg">
-            Join thousands who trust Kundli AI for daily astrological guidance.
+            Join thousands who trust KundliAI for daily Vedic astrology guidance.
           </p>
           <a
             href={WHATSAPP_LINK}
@@ -190,24 +190,42 @@ const Index = () => {
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-10 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform"
           >
             <WhatsAppIcon size={24} />
-            Chat with Kundli AI
+            Chat with KundliAI
           </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-8 px-6">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-muted-foreground text-sm">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="Kundli AI" width={36} height={36} className="rounded" />
-            <span className="font-display text-gradient-gold">Kundli AI</span>
+      <footer className="border-t border-border/50 py-10 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
+            <div className="flex items-center gap-2">
+              <img src={logo} alt="KundliAI" width={36} height={36} className="rounded" />
+              <span className="font-display text-gradient-gold">KundliAI</span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-8 text-sm">
+              <div>
+                <p className="font-semibold text-foreground/60 mb-3 uppercase tracking-wider text-xs">Company</p>
+                <div className="flex flex-row flex-wrap gap-x-5 gap-y-2">
+                  <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link>
+                  <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors">Pricing</Link>
+                  <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact Us</Link>
+                </div>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground/60 mb-3 uppercase tracking-wider text-xs">Legal</p>
+                <div className="flex flex-row flex-wrap gap-x-5 gap-y-2">
+                  <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link>
+                  <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>
+                  <Link to="/refund" className="text-muted-foreground hover:text-foreground transition-colors">Refund Policy</Link>
+                  <Link to="/account-deletion" className="text-muted-foreground hover:text-foreground transition-colors">Account Deletion</Link>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center gap-4">
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/account-deletion" className="hover:text-foreground transition-colors">Account Deletion</Link>
+          <div className="border-t border-border/30 pt-6 text-center text-muted-foreground text-sm">
+            <p>© {new Date().getFullYear()} KundliAI. All rights reserved.</p>
           </div>
-          <p>© {new Date().getFullYear()} KundliAI. All rights reserved.</p>
         </div>
       </footer>
     </div>
