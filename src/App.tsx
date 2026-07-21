@@ -13,6 +13,7 @@ import Pricing from "./pages/Pricing.tsx";
 import RefundPolicy from "./pages/RefundPolicy.tsx";
 import ContactUs from "./pages/ContactUs.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
+import Footer from "./components/Footer.tsx";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -26,22 +26,22 @@ const RefundPolicy = () => {
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">1. Overview</h2>
-            <p>KundliAI is a digital Vedic astrology service with no physical goods. The service is free to try up to a set number of queries. After that, continuing requires a donation — a minimum amount applies, which varies by currency. You may always choose to contribute more. This policy covers all payments made to KundliAI.</p>
+            <p>KundliAI is a digital Vedic astrology service with no physical goods. The service is free to try up to a set number of queries. After that, continuing requires a payment — a minimum amount applies, which varies by currency. You may always choose to contribute more. This policy covers all payments made to KundliAI.</p>
           </section>
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">2. How Payments Work</h2>
-            <p>Once your free queries are used, you will be asked to make a donation to continue using the service. A currency-specific minimum donation amount applies — this minimum exists to cover the operational costs of providing the service. There is no upper limit; you may contribute any amount at or above the minimum.</p>
-            <p className="mt-2">Each donation unlocks continued access to KundliAI's astrology services on WhatsApp.</p>
+            <p>Once your free queries are used, you will be asked to make a payment to continue using the service. A currency-specific minimum payment amount applies — this minimum exists to cover the operational costs of providing the service. There is no upper limit; you may contribute any amount at or above the minimum.</p>
+            <p className="mt-2">Each payment unlocks continued access to KundliAI's astrology services on WhatsApp.</p>
           </section>
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">3. Refund Eligibility</h2>
             <p>You may request a refund within <strong>7 days</strong> of your payment. Refunds are considered under the following conditions:</p>
             <ul className="list-disc pl-6 space-y-2 mt-2">
-              <li><strong>Eligible:</strong> Payment made but service not yet used (no readings or predictions delivered after the donation)</li>
+              <li><strong>Eligible:</strong> Payment made but service not yet used (no readings or predictions delivered after the payment)</li>
               <li><strong>Eligible:</strong> Accidental duplicate payment or clear technical error</li>
-              <li><strong>Not eligible:</strong> Service has already been used following the donation — once readings, predictions, or Kundli analysis have been delivered, the payment is considered rendered</li>
+              <li><strong>Not eligible:</strong> Service has already been used following the payment — once readings, predictions, or Kundli analysis have been delivered, the payment is considered rendered</li>
               <li><strong>Not eligible:</strong> Request submitted after the 7-day window has closed</li>
               <li><strong>Not eligible:</strong> Account suspended or terminated due to violations of our <Link to="/terms" className="text-accent hover:underline">Terms of Service</Link></li>
             </ul>

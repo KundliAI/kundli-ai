@@ -48,9 +48,9 @@ const Pricing = () => {
               <Sparkles size={20} className="text-accent" />
             </div>
             <div>
-              <h3 className="font-display font-bold text-foreground mb-1">Continue with a donation</h3>
+              <h3 className="font-display font-bold text-foreground mb-1">Continue with a purchase</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                After your free queries are used up, a minimum donation is required to continue. The minimum amount varies by currency to keep things fair across regions — you're always welcome to contribute more if you'd like. Every contribution helps keep KundliAI running and improving.
+                After your free queries are used up, a minimum payment is required to continue. The minimum amount varies by currency to keep things fair across regions — you're always welcome to contribute more if you'd like. Every contribution helps keep KundliAI running and improving.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Pricing = () => {
             <div>
               <h3 className="font-display font-bold text-foreground mb-1">Why we do it this way</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Running an AI-powered astrology service has real costs — infrastructure, AI models, and ongoing development. We chose the donation model because we want KundliAI to be accessible to everyone, regardless of budget. Trust over transactions.
+                Running an AI-powered astrology service has real costs — infrastructure, AI models, and ongoing development. We chose this model because we want KundliAI to be accessible to everyone, regardless of budget. Trust over transactions.
               </p>
             </div>
           </div>
