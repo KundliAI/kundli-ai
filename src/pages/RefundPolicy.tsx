@@ -20,7 +20,11 @@ const RefundPolicy = () => {
 
       <main className="container mx-auto max-w-3xl px-6 pt-28 pb-16">
         <h1 className="font-display text-3xl md:text-4xl font-bold mb-2 text-gradient-gold">Refund Policy</h1>
-        <p className="text-muted-foreground text-sm mb-10">Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</p>
+        <p className="text-muted-foreground text-sm mb-6">Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</p>
+
+        <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-8 text-sm">
+          <strong>Legal Entity:</strong> KundliAI is a service provided by KUNDLI A I ONE IT INFRASTRUCTURE L.L.C.
+        </div>
 
         <div className="prose-legal space-y-8 text-foreground/85 text-sm leading-relaxed">
 

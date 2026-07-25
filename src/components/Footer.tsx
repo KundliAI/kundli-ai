@@ -34,7 +34,7 @@ const Footer = () => {
           <p>
             All readings are AI-generated Vedic astrology content for reflection and personal guidance. They are not financial, medical, or legal advice.
           </p>
-          <p>© {new Date().getFullYear()} KundliAI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} KUNDLI A I ONE IT INFRASTRUCTURE L.L.C. All rights reserved.</p>
         </div>
       </div>
     </footer>
