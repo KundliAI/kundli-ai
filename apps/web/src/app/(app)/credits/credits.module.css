@@ -1,0 +1,13 @@
+.packs { display: grid; gap: 12px; }
+.pack { display: grid; gap: 4px; text-align: left; padding: 20px 22px; border-radius: var(--r-lg); border: 2px solid transparent; background: var(--c-surface); cursor: pointer; transition: border-color var(--d-fast), transform var(--d-fast); }
+.pack:hover { transform: translateY(-2px); }
+.pack[aria-checked="true"] { border-color: var(--c-accent); background: var(--c-card); color: var(--c-card-ink); }
+.pack[aria-checked="true"] :global(.muted) { color: var(--c-card-muted); }
+.packTop { display: flex; justify-content: space-between; gap: 12px; }
+.best { color: var(--c-accent-strong); }
+.pack[aria-checked="true"] .best { color: var(--c-card-gold); }
+.price { font-size: 36px; font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; }
+.status { display: grid; gap: 12px; justify-items: start; padding: 28px; border-radius: var(--r-lg); background: var(--c-surface); }
+.status[data-state="paid"] { background: var(--c-card); color: var(--c-card-ink); }
+.status[data-state="failed"] { box-shadow: inset 4px 0 0 var(--c-danger); }
+.statusH { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; }

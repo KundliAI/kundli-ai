@@ -157,7 +157,7 @@ export const mockApi: SideraApi = {
   },
   async messages() {
     await wait(150);
-    return s().messages;
+    return [...s().messages];
   },
   async ask(text, incognito) {
     const me = s().me;
@@ -219,7 +219,7 @@ export const mockApi: SideraApi = {
     }
     return { orderId: oid, state: o.state, credits: s().me?.credits };
   },
-  async friends() { await wait(150); return s().friends; },
+  async friends() { await wait(150); return [...s().friends]; },
   async addFriend({ name }) {
     await wait(300);
     const SIGNS = ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"];

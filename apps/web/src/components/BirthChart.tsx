@@ -6,8 +6,9 @@ import styles from "./BirthChart.module.css";
 
 const SHORT: Record<PlanetId, string> = { Su: "Su", Mo: "Mo", Ma: "Ma", Me: "Me", Ju: "Ju", Ve: "Ve", Sa: "Sa", Ra: "Ra", Ke: "Ke" };
 
-function label(chart: Chart, filter: (p: Chart["planets"][number]) => boolean): string[] {
-  return chart.planets.filter(filter).map((p) => SHORT[p.id] + (p.retro ? "ʀ" : ""));
+interface Item { text: string; retro?: boolean }
+function label(chart: Chart, filter: (p: Chart["planets"][number]) => boolean): Item[] {
+  return chart.planets.filter(filter).map((p) => ({ text: SHORT[p.id], retro: p.retro }));
 }
 
 /** North or South Indian kundli drawn from the same chart data. */
@@ -20,13 +21,15 @@ export function BirthChart({ chart, size = 320 }: { chart: Chart; size?: number 
   );
 }
 
-function Stack({ x, y, items, asc }: { x: number; y: number; items: string[]; asc?: boolean }) {
-  const lines = asc ? ["Asc", ...items] : items;
+function Stack({ x, y, items, asc }: { x: number; y: number; items: Item[]; asc?: boolean }) {
+  const lines: Item[] = asc ? [{ text: "Asc" }, ...items] : items;
   const start = y - ((lines.length - 1) * 4.6) / 2;
   return (
     <>
       {lines.map((t, i) => (
-        <text key={t + i} x={x} y={start + i * 4.6} className={i === 0 && asc ? styles.asc : styles.planet} textAnchor="middle" dominantBaseline="middle">{t}</text>
+        <text key={t.text + i} x={x} y={start + i * 4.6} className={i === 0 && asc ? styles.asc : styles.planet} textAnchor="middle" dominantBaseline="middle">
+          {t.text}{t.retro && <tspan className={styles.retro} dy="-1.2">R</tspan>}
+        </text>
       ))}
     </>
   );

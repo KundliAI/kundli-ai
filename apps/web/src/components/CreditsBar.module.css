@@ -1,4 +1,4 @@
-.wrap { display: grid; gap: var(--s-2); font-size: var(--fs-small); }
+.wrap { display: grid; gap: var(--s-2); font-size: var(--fs-small); width: 100%; }
 .row { display: flex; justify-content: space-between; gap: var(--s-3); }
 .state { font-weight: 600; }
 .track { height: 6px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--c-ink) 14%, transparent); overflow: hidden; }
