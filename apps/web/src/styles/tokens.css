@@ -1,0 +1,98 @@
+/* GENERATED from packages/tokens/tokens.json by build.mjs. Do not edit. */
+:root {
+  --c-bg: #ECDCB8;
+  --c-surface: #DFC89A;
+  --c-surface-strong: #D3BA87;
+  --c-ink: #2B1A0F;
+  --c-ink-muted: #6A5236;
+  --c-line: #C9AF7C;
+  --c-accent: #E2A628;
+  --c-on-accent: #2A1607;
+  --c-accent-strong: #C66A1E;
+  --c-card: #3A2415;
+  --c-card-ink: #F6EAD2;
+  --c-card-muted: #CDB896;
+  --c-card-gold: #E2B04A;
+  --c-bubble: #4B301D;
+  --c-bubble-ink: #F6EAD2;
+  --c-user-bubble: #E2A628;
+  --c-user-bubble-ink: #2A1607;
+  --c-chart-line: #8A7432;
+  --c-danger: #A3361B;
+  --c-success: #4E6B2A;
+  --font: var(--font-latin, "Manrope"), var(--font-deva, "Noto Sans Devanagari"), system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --fs-display: 56px;
+  --fs-h1: 40px;
+  --fs-h2: 28px;
+  --fs-h3: 20px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-label: 12px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --d-fast: 140ms;
+  --d-base: 220ms;
+  --d-slow: 420ms;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-bg: #3A2415;
+    --c-surface: #4B301D;
+    --c-surface-strong: #5A3A24;
+    --c-ink: #F6EAD2;
+    --c-ink-muted: #CDB896;
+    --c-line: #62432B;
+    --c-accent: #E2A628;
+    --c-on-accent: #2A1607;
+    --c-accent-strong: #F0B547;
+    --c-card: #ECDCB8;
+    --c-card-ink: #2B1A0F;
+    --c-card-muted: #6A5236;
+    --c-card-gold: #7D6A2E;
+    --c-bubble: #ECDCB8;
+    --c-bubble-ink: #2B1A0F;
+    --c-user-bubble: #E2A628;
+    --c-user-bubble-ink: #2A1607;
+    --c-chart-line: #C8AB5E;
+    --c-danger: #F08A6A;
+    --c-success: #A9C77A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --c-bg: #3A2415;
+  --c-surface: #4B301D;
+  --c-surface-strong: #5A3A24;
+  --c-ink: #F6EAD2;
+  --c-ink-muted: #CDB896;
+  --c-line: #62432B;
+  --c-accent: #E2A628;
+  --c-on-accent: #2A1607;
+  --c-accent-strong: #F0B547;
+  --c-card: #ECDCB8;
+  --c-card-ink: #2B1A0F;
+  --c-card-muted: #6A5236;
+  --c-card-gold: #7D6A2E;
+  --c-bubble: #ECDCB8;
+  --c-bubble-ink: #2B1A0F;
+  --c-user-bubble: #E2A628;
+  --c-user-bubble-ink: #2A1607;
+  --c-chart-line: #C8AB5E;
+  --c-danger: #F08A6A;
+  --c-success: #A9C77A;
+  color-scheme: dark;
+}

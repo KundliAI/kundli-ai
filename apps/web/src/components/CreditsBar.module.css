@@ -1,0 +1,9 @@
+.wrap { display: grid; gap: var(--s-2); font-size: var(--fs-small); }
+.row { display: flex; justify-content: space-between; gap: var(--s-3); }
+.state { font-weight: 600; }
+.track { height: 6px; border-radius: var(--r-pill); background: color-mix(in srgb, var(--c-ink) 14%, transparent); overflow: hidden; }
+.track i { display: block; height: 100%; background: var(--c-accent); border-radius: inherit; transition: width var(--d-slow) ease; }
+.wrap[data-state="low"] .track i { background: var(--c-accent-strong); }
+.wrap[data-state="empty"] .state { color: var(--c-danger); }
+.buy { justify-self: start; font-weight: 600; }
+.compact .buy { font-size: var(--fs-small); }

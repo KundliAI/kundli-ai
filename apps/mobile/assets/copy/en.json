@@ -1,0 +1,263 @@
+{
+  "brand": {
+    "name": "Sidera",
+    "tagline": "Vedic astrology, answered plainly"
+  },
+  "nav": {
+    "home": "Home",
+    "chat": "Chat",
+    "friends": "Friends",
+    "profile": "Profile",
+    "whatsapp": "Chat on WhatsApp",
+    "refer": "Refer a friend",
+    "login": "Log in",
+    "start": "Start free",
+    "how": "How it works",
+    "pricing": "Pricing"
+  },
+  "landing": {
+    "h1": "Ask a Vedic astrologer anything, in Hindi or English",
+    "lead": "Sidera reads your kundli and answers your questions about marriage, career, money and family. Same chat on WhatsApp, web and app.",
+    "fact": "Your first questions are free. No card needed.",
+    "ctaPrimary": "Start free",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "howH2": "How a reading works",
+    "how": [
+      {
+        "t": "Share your birth details",
+        "d": "Date, place and time if you know it. If you don't, pick morning, afternoon, evening or night."
+      },
+      {
+        "t": "Get your kundli",
+        "d": "Your birth chart, nakshatra and current dasha, worked out from real planetary positions."
+      },
+      {
+        "t": "Ask in your own words",
+        "d": "Type the way you talk, in Hindi, English or Hinglish. Answers point to the houses and planets behind them."
+      }
+    ],
+    "dailyH2": "A card for every morning",
+    "dailyLead": "Each day's card is worked out from the panchang for your city: tithi, nakshatra, good hours and one line on what the day favours.",
+    "chartH2": "Your chart, the way your family reads it",
+    "chartLead": "North Indian or South Indian, chosen from where you were born. Switch any time.",
+    "channelsH2": "One chat, wherever you are",
+    "channelsLead": "Start on WhatsApp, continue on the app, read back on the web. It's one conversation and one balance.",
+    "priceH2": "Pay only for what you ask",
+    "priceLead": "Top up when you need to. No subscription.",
+    "faqH2": "Questions people ask first",
+    "faq": [
+      {
+        "q": "Is my birth data private?",
+        "a": "Your details are used only to cast your chart and answer you. You can see what Sidera remembers and delete it, or delete your account, from your profile."
+      },
+      {
+        "q": "Why do I log in with WhatsApp?",
+        "a": "You send a short code from your WhatsApp. That proves the number is yours without an SMS, and links your web, app and WhatsApp chats into one."
+      },
+      {
+        "q": "I don't know my birth time.",
+        "a": "Pick the part of the day you were born. Sidera reads what can be read without it and tells you when a time would change the answer."
+      }
+    ],
+    "closeH2": "Ask your first question",
+    "footer": "Sidera is made by KundliAI. Readings are guidance, not medical, legal or financial advice."
+  },
+  "login": {
+    "h1": "Log in with WhatsApp",
+    "lead": "One account for WhatsApp, web and app.",
+    "phoneLabel": "WhatsApp number",
+    "phoneHint": "India (+91) only for now",
+    "continue": "Continue",
+    "confirmH": "Is this your WhatsApp number?",
+    "edit": "Edit",
+    "sendH": "Send this code on WhatsApp",
+    "sendLead": "Tap the button. WhatsApp opens with the code typed in. Just press send.",
+    "sendCta": "Open WhatsApp",
+    "waiting": "Waiting for your message",
+    "verified": "Number verified",
+    "expired": "That code expired. Get a new one.",
+    "locked": "Too many tries. Try again in an hour.",
+    "newCode": "Get a new code",
+    "noWhatsapp": "Sidera needs WhatsApp to verify your number for now.",
+    "lostNumber": "Lost your number? Use your backup email",
+    "invalid": "Enter a 10-digit Indian mobile number."
+  },
+  "onboarding": {
+    "progress": "Step {N} of {TOTAL}",
+    "back": "Back",
+    "next": "Continue",
+    "skip": "Skip",
+    "consentH": "Before we start",
+    "consentLead": "Sidera uses your birth details to cast your chart. It can also remember things you tell it, so you don't have to repeat yourself.",
+    "consentTerms": "I agree to the terms and privacy policy",
+    "consentMemory": "Let Sidera remember our conversations",
+    "consentMemoryHint": "You can view and delete what it remembers any time.",
+    "nameH": "What should we call you?",
+    "nameLabel": "Your name",
+    "dobH": "When were you born?",
+    "dobLabel": "Date of birth",
+    "dobFuture": "That date is in the future.",
+    "dobInvalid": "That date doesn't exist.",
+    "timeH": "Do you know your birth time?",
+    "timeYes": "Yes",
+    "timeNo": "Not exactly",
+    "timeLabel": "Birth time",
+    "dayPartH": "Roughly when?",
+    "dayParts": {
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "night": "Night"
+    },
+    "placeH": "Where were you born?",
+    "placeLabel": "City or town",
+    "placeHint": "If it's a village, pick the nearest town.",
+    "interestsH": "What's on your mind?",
+    "interestsLead": "Pick any. It helps Sidera know where to look first.",
+    "interests": {
+      "marriage": "Marriage",
+      "career": "Career",
+      "relationship": "Relationship",
+      "family": "Family",
+      "personal": "Personal growth"
+    },
+    "emailH": "Add a backup email",
+    "emailLead": "Optional. If you ever lose your number, this is how you get your account back.",
+    "emailLabel": "Email",
+    "doneH": "Your chart is ready",
+    "doneLead": "A few more questions make answers sharper. It takes two minutes.",
+    "doneQuiz": "Answer a few questions",
+    "doneChat": "Go to chat"
+  },
+  "home": {
+    "greeting": "Good {PART}, {NAME}",
+    "ask": "Ask anything",
+    "askPlaceholder": "When will I get married?",
+    "dailyFlip": "Tap to turn over",
+    "dailyShare": "Share",
+    "dailyLocked": "Top up to read the full card",
+    "goodHours": "Good hours",
+    "luckyColour": "Colour",
+    "quizCard": "Answer 6 questions for sharper readings",
+    "quizCta": "Start",
+    "chartH": "Your birth chart",
+    "chartSwitch": "Switch to {STYLE}",
+    "styles": {
+      "north": "North Indian",
+      "south": "South Indian"
+    },
+    "dasha": "Dasha",
+    "referH": "Give a friend free questions",
+    "referLead": "When they verify, you both get credits.",
+    "referCta": "Copy invite link",
+    "copied": "Link copied",
+    "waH": "Prefer WhatsApp?",
+    "waLead": "Same chat, same balance.",
+    "waCta": "Open WhatsApp"
+  },
+  "credits": {
+    "label": "Credits",
+    "resets": "Resets {TIME}",
+    "buy": "Buy credits",
+    "trial": "Free trial",
+    "low": "Running low",
+    "empty": "Out of credits",
+    "packsH": "Top up",
+    "packsLead": "Pay once. No subscription.",
+    "questions": "About {N} questions",
+    "best": "Most chosen",
+    "pay": "Pay ₹{PRICE}",
+    "pending": "Confirming your payment",
+    "pendingLead": "This can take a minute. You can leave this page.",
+    "paid": "Payment received, credits added",
+    "failed": "Payment failed. Nothing was charged.",
+    "retry": "Try again"
+  },
+  "chat": {
+    "title": "Chat",
+    "placeholder": "Ask about marriage, career, money…",
+    "send": "Send",
+    "suggestions": [
+      "Career",
+      "Marriage",
+      "Health"
+    ],
+    "error": "That didn't go through. Try again. No credit was used.",
+    "retry": "Retry",
+    "textOnly": "Text only for now. Voice and photos are coming.",
+    "nudge": "You're running low on credits.",
+    "blocked": "You're out of credits. Top up to keep asking.",
+    "trialEnded": "Your free trial has ended.",
+    "incognito": "Incognito",
+    "incognitoOn": "Incognito on. Nothing from this chat is remembered.",
+    "fromWhatsapp": "on WhatsApp",
+    "thinking": "Reading your chart"
+  },
+  "friends": {
+    "h1": "Friends",
+    "lead": "See how today looks for the people you care about.",
+    "add": "Add a friend",
+    "empty": "No friends yet. Add someone with their birth date.",
+    "sun": "Sun",
+    "moon": "Moon",
+    "invite": "Invite on WhatsApp",
+    "name": "Name",
+    "save": "Add friend"
+  },
+  "profile": {
+    "h1": "Profile",
+    "photo": "Edit photo",
+    "birth": "Change birth details",
+    "birthNote": "You can change these once a day.",
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "hi": "हिन्दी",
+      "hinglish": "Hinglish"
+    },
+    "chartStyle": "Chart style",
+    "theme": "Appearance",
+    "themes": {
+      "system": "Match device",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "memory": "What Sidera remembers",
+    "memoryEmpty": "Nothing saved yet.",
+    "delete": "Delete",
+    "clearChat": "Clear chat",
+    "clearChatNote": "Clears recent messages. What Sidera remembers stays.",
+    "changeNumber": "Change number",
+    "logout": "Log out",
+    "deleteData": "Delete my data",
+    "deleteAccount": "Delete account",
+    "deleteAccountNote": "Your account is removed after 7 days. Log in before then to cancel.",
+    "help": "Help",
+    "human": "Talk to a person"
+  },
+  "signs": [
+    "Aries",
+    "Taurus",
+    "Gemini",
+    "Cancer",
+    "Leo",
+    "Virgo",
+    "Libra",
+    "Scorpio",
+    "Sagittarius",
+    "Capricorn",
+    "Aquarius",
+    "Pisces"
+  ],
+  "planets": {
+    "Su": "Sun",
+    "Mo": "Moon",
+    "Ma": "Mars",
+    "Me": "Mercury",
+    "Ju": "Jupiter",
+    "Ve": "Venus",
+    "Sa": "Saturn",
+    "Ra": "Rahu",
+    "Ke": "Ketu"
+  }
+}

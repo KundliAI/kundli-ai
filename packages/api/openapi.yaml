@@ -1,0 +1,416 @@
+openapi: 3.1.0
+info:
+  title: Sidera customer API
+  version: 0.1.0
+  description: |
+    One API for the Sidera website and the Flutter app. It is served by new
+    Supabase Edge Functions in KundliAI/whatsapp-webhook (`customer-api`),
+    which reuse the bot's `_shared/` logic, so an account, its chat and its
+    credits are the same on WhatsApp, web and app.
+
+    Until that function ships, both clients run against an in-memory mock
+    of this contract (`apps/web/src/lib/api/mock.ts`, `apps/mobile/lib/api/mock_api.dart`).
+
+    Auth: reverse OTP over WhatsApp. The client asks for a code, the user
+    sends it to the bot from their own number, the client polls until the
+    bot has matched it. The session token is then sent as `Authorization: Bearer`.
+servers:
+  - url: https://{project}.supabase.co/functions/v1/customer-api
+    variables:
+      project: { default: your-project-ref }
+
+paths:
+  /auth/start:
+    post:
+      summary: Start a login. Returns a code the user must send on WhatsApp.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [phone]
+              properties:
+                phone: { type: string, description: "E.164, +91 only in v1", example: "+919876543210" }
+                ref: { type: string, description: "referral or campaign code, else 'organic'" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/LoginChallenge" }
+        "429": { description: "Locked after 5 tries; retry after `retryAfterSec`" }
+
+  /auth/status/{challengeId}:
+    get:
+      summary: Poll until the user has sent the code on WhatsApp.
+      parameters:
+        - { name: challengeId, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/LoginStatus" }
+
+  /me:
+    get:
+      summary: The signed-in account, onboarding progress and credit state.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Me" }
+    delete:
+      summary: Delete the account. 7-day grace period, then removed everywhere.
+      responses: { "202": { description: scheduled } }
+
+  /me/profile:
+    patch:
+      summary: Save one onboarding or profile step. Saved per step and synced to WhatsApp.
+      requestBody:
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/ProfilePatch" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Me" }
+
+  /places:
+    get:
+      summary: City search for birth place (stores the time zone).
+      parameters:
+        - { name: q, in: query, required: true, schema: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/Place" } }
+
+  /chart:
+    get:
+      summary: The user's birth chart (or a friend's, with `friendId`).
+      parameters:
+        - { name: friendId, in: query, schema: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Chart" }
+
+  /daily-card:
+    get:
+      summary: Today's card, reset at midnight in the saved time zone. Locked (one line) when the balance is zero.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/DailyCard" }
+
+  /chat/messages:
+    get:
+      summary: The one long chat (same thread as WhatsApp). Newest last.
+      parameters:
+        - { name: before, in: query, schema: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/ChatMessage" } }
+    post:
+      summary: Ask a question. Text only in v1. No credit is charged when the answer fails.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [text]
+              properties:
+                text: { type: string, maxLength: 2000 }
+                incognito: { type: boolean, description: "No memory, nothing saved" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/ChatReply" }
+        "402": { description: "Trial ended or no credits" }
+
+  /chat/clear:
+    post:
+      summary: Clear recent context. Long-term memory is kept.
+      responses: { "204": { description: cleared } }
+
+  /memory:
+    get:
+      summary: What the astrologer remembers about the user.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/MemoryItem" } }
+  /memory/{id}:
+    delete:
+      parameters:
+        - { name: id, in: path, required: true, schema: { type: string } }
+      responses: { "204": { description: deleted } }
+
+  /credits/packs:
+    get:
+      summary: Pay-as-you-go top-ups (INR).
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/CreditPack" } }
+  /credits/orders:
+    post:
+      summary: Create a Razorpay order for a pack. Credited to the signed-in account by order ID.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [packId]
+              properties: { packId: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Order" }
+  /credits/orders/{orderId}:
+    get:
+      summary: Payment status after checkout.
+      parameters:
+        - { name: orderId, in: path, required: true, schema: { type: string } }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Order" }
+
+  /friends:
+    get:
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { type: array, items: { $ref: "#/components/schemas/Friend" } }
+    post:
+      summary: Add a friend by birth details (no approval needed in v1).
+      requestBody:
+        content:
+          application/json:
+            schema: { $ref: "#/components/schemas/FriendInput" }
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Friend" }
+
+  /referral:
+    get:
+      summary: The user's referral link and progress. Credit lands after the friend verifies; monthly cap.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/Referral" }
+
+components:
+  schemas:
+    Language: { type: string, enum: [en, hi, hinglish] }
+    Interest: { type: string, enum: [marriage, career, relationship, family, personal] }
+    DayPart: { type: string, enum: [morning, afternoon, evening, night] }
+    ChartStyle: { type: string, enum: [north, south] }
+
+    LoginChallenge:
+      type: object
+      required: [challengeId, code, whatsappUrl, expiresAt]
+      properties:
+        challengeId: { type: string }
+        code: { type: string, example: "SID-4821" }
+        whatsappUrl: { type: string, description: "wa.me link with the code prefilled" }
+        expiresAt: { type: string, format: date-time }
+        triesLeft: { type: integer }
+
+    LoginStatus:
+      type: object
+      required: [state]
+      properties:
+        state: { type: string, enum: [waiting, verified, expired, locked] }
+        token: { type: string }
+        retryAfterSec: { type: integer }
+
+    Me:
+      type: object
+      required: [id, phone, onboarding, credits, settings]
+      properties:
+        id: { type: string }
+        phone: { type: string }
+        name: { type: string }
+        photoUrl: { type: string }
+        onboarding:
+          type: object
+          properties:
+            step: { type: string, enum: [consent, name, birthTime, place, interests, email, done] }
+            questionnaireDone: { type: boolean }
+        profile: { $ref: "#/components/schemas/Profile" }
+        credits: { $ref: "#/components/schemas/Credits" }
+        settings:
+          type: object
+          properties:
+            language: { $ref: "#/components/schemas/Language" }
+            chartStyle: { $ref: "#/components/schemas/ChartStyle" }
+
+    Profile:
+      type: object
+      properties:
+        name: { type: string }
+        birthDate: { type: string, format: date }
+        birthTime: { type: string, description: "HH:mm, when known" }
+        birthDayPart: { $ref: "#/components/schemas/DayPart" }
+        place: { $ref: "#/components/schemas/Place" }
+        interests: { type: array, items: { $ref: "#/components/schemas/Interest" } }
+        backupEmail: { type: string, format: email }
+        consentMemory: { type: boolean }
+
+    ProfilePatch:
+      allOf:
+        - $ref: "#/components/schemas/Profile"
+        - type: object
+          properties:
+            step: { type: string }
+            language: { $ref: "#/components/schemas/Language" }
+            chartStyle: { $ref: "#/components/schemas/ChartStyle" }
+
+    Place:
+      type: object
+      required: [id, name, region, tz]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        region: { type: string, description: "state, country" }
+        tz: { type: string, example: "Asia/Kolkata" }
+        lat: { type: number }
+        lon: { type: number }
+        defaultChartStyle: { $ref: "#/components/schemas/ChartStyle" }
+
+    Credits:
+      type: object
+      description: Balance is shown as a bar, never as a number.
+      required: [state, fraction]
+      properties:
+        state: { type: string, enum: [trial, active, low, empty] }
+        fraction: { type: number, minimum: 0, maximum: 1 }
+        resetsAt: { type: string, format: date-time }
+
+    Planet:
+      type: object
+      required: [id, sign, house, degree]
+      properties:
+        id: { type: string, enum: [Su, Mo, Ma, Me, Ju, Ve, Sa, Ra, Ke] }
+        sign: { type: integer, minimum: 1, maximum: 12 }
+        house: { type: integer, minimum: 1, maximum: 12 }
+        degree: { type: number }
+        retro: { type: boolean }
+
+    Chart:
+      type: object
+      required: [ascSign, planets, style]
+      properties:
+        ascSign: { type: integer, minimum: 1, maximum: 12 }
+        moonSign: { type: integer }
+        sunSign: { type: integer }
+        nakshatra: { type: string }
+        planets: { type: array, items: { $ref: "#/components/schemas/Planet" } }
+        style: { $ref: "#/components/schemas/ChartStyle" }
+        dasha: { type: string, example: "Venus–Saturn until Mar 2027" }
+
+    DailyCard:
+      type: object
+      required: [date, weekday, tithi, nakshatra, line, locked]
+      properties:
+        date: { type: string, format: date }
+        weekday: { type: string }
+        tithi: { type: string }
+        nakshatra: { type: string }
+        line: { type: string }
+        detail: { type: string, description: "back of the card; omitted when locked" }
+        luckyColour: { type: string }
+        goodHours: { type: string }
+        locked: { type: boolean }
+        shareUrl: { type: string }
+
+    ChatMessage:
+      type: object
+      required: [id, role, text, at]
+      properties:
+        id: { type: string }
+        role: { type: string, enum: [user, astrologer, system] }
+        text: { type: string }
+        at: { type: string, format: date-time }
+        channel: { type: string, enum: [whatsapp, web, app] }
+        chart: { type: boolean, description: "render the birth chart above this message" }
+        suggestions: { type: array, items: { type: string } }
+
+    ChatReply:
+      type: object
+      required: [message, credits]
+      properties:
+        message: { $ref: "#/components/schemas/ChatMessage" }
+        credits: { $ref: "#/components/schemas/Credits" }
+        nudge: { type: boolean, description: "20% or less left: show one buy nudge" }
+
+    MemoryItem:
+      type: object
+      required: [id, text, at]
+      properties:
+        id: { type: string }
+        text: { type: string }
+        at: { type: string, format: date-time }
+
+    CreditPack:
+      type: object
+      required: [id, label, priceInr, questions]
+      properties:
+        id: { type: string }
+        label: { type: string }
+        priceInr: { type: integer }
+        questions: { type: integer, description: "approximate questions it covers" }
+        best: { type: boolean }
+
+    Order:
+      type: object
+      required: [orderId, state]
+      properties:
+        orderId: { type: string }
+        state: { type: string, enum: [created, pending, paid, failed] }
+        razorpayKeyId: { type: string }
+        amountPaise: { type: integer }
+        credits: { $ref: "#/components/schemas/Credits" }
+
+    FriendInput:
+      type: object
+      required: [name, birthDate]
+      properties:
+        name: { type: string }
+        birthDate: { type: string, format: date }
+        birthTime: { type: string }
+        placeId: { type: string }
+
+    Friend:
+      type: object
+      required: [id, name, sunSign, moonSign]
+      properties:
+        id: { type: string }
+        name: { type: string }
+        sunSign: { type: string }
+        moonSign: { type: string }
+        todayLine: { type: string }
+
+    Referral:
+      type: object
+      required: [url, joined, monthlyCap]
+      properties:
+        url: { type: string }
+        joined: { type: integer }
+        monthlyCap: { type: integer }

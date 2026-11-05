@@ -1,0 +1,10 @@
+.chart { width: 100%; height: auto; max-width: var(--chart-max, 360px); font-family: var(--font); }
+.frame { fill: none; stroke: var(--chart-line, var(--c-chart-line)); stroke-width: 0.7; }
+.line { fill: none; stroke: var(--chart-line, var(--c-chart-line)); stroke-width: 0.45; }
+.cell { fill: none; stroke: var(--chart-line, var(--c-chart-line)); stroke-width: 0.45; }
+.planet { font-size: 3.7px; font-weight: 600; fill: var(--chart-ink, currentColor); }
+.asc { font-size: 3.4px; font-weight: 600; fill: var(--c-accent-strong); letter-spacing: 0.04em; }
+.sign { font-size: 2.9px; fill: var(--chart-line, var(--c-chart-line)); font-weight: 500; }
+.ascMark { stroke: var(--c-accent-strong); stroke-width: 0.8; }
+.centre { font-size: 4px; font-weight: 500; fill: var(--chart-ink, currentColor); }
+.centreSub { font-size: 3.2px; fill: var(--chart-line, var(--c-chart-line)); }
