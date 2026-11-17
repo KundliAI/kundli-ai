@@ -50,7 +50,7 @@ const Pricing = () => {
             <div>
               <h3 className="font-display font-bold text-foreground mb-1">Continue with a purchase</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                After your free queries are used up, a minimum payment is required to continue. The minimum amount varies by currency to keep things fair across regions — you're always welcome to contribute more if you'd like. Every contribution helps keep KundliAI running and improving.
+                After your free queries are used up, a small minimum payment in Indian rupees (₹) is required to continue. You're always welcome to contribute more if you'd like. Every contribution helps keep KundliAI running and improving. KundliAI is for Indian (+91) WhatsApp numbers.
               </p>
             </div>
           </div>

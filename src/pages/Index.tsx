@@ -14,13 +14,13 @@ const features = [
   },
   {
     icon: Moon,
-    title: "Daily Horoscope",
-    description: "Receive accurate daily, weekly, and monthly predictions tailored to your zodiac sign.",
+    title: "Daily Guidance",
+    description: "Ask about today, this week or the months ahead, read from your own birth chart, not just your sign.",
   },
   {
     icon: Sparkles,
-    title: "Kundli Matching",
-    description: "Check compatibility for marriage with our precise Kundli matching analysis.",
+    title: "Marriage & Relationships",
+    description: "Ask when marriage is likely, what your chart says about a partner, and how family life looks ahead.",
   },
   {
     icon: Sun,
@@ -181,7 +181,7 @@ const Index = () => {
             Ready to Know Your Stars?
           </h2>
           <p className="text-foreground/70 mb-10 text-lg">
-            Join thousands who trust KundliAI for daily Vedic astrology guidance.
+            Your first questions are free. Just say hello on WhatsApp.
           </p>
           <a
             href={WHATSAPP_LINK}
