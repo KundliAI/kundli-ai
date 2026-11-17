@@ -12,8 +12,8 @@ const RefundPolicy = () => {
             <span className="text-sm">Back</span>
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <img src={logo} alt="KundliAI" width={32} height={32} className="rounded-lg" />
-            <span className="font-display text-lg text-gradient-gold font-bold">KundliAI</span>
+            <img src={logo} alt="Sidera" width={32} height={32} className="rounded-lg" />
+            <span className="font-display text-lg text-gradient-gold font-bold">Sidera</span>
           </div>
         </div>
       </nav>
@@ -23,20 +23,20 @@ const RefundPolicy = () => {
         <p className="text-muted-foreground text-sm mb-6">Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</p>
 
         <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-8 text-sm">
-          <strong>Legal Entity:</strong> KundliAI is a service provided by KUNDLI A I ONE IT INFRASTRUCTURE L.L.C.
+          <strong>Legal Entity:</strong> Sidera is a service provided by KUNDLI A I ONE IT INFRASTRUCTURE L.L.C.
         </div>
 
         <div className="prose-legal space-y-8 text-foreground/85 text-sm leading-relaxed">
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">1. Overview</h2>
-            <p>KundliAI is a digital Vedic astrology service with no physical goods. The service is free to try up to a set number of queries. After that, continuing requires a payment — a minimum amount applies, which varies by currency. You may always choose to contribute more. This policy covers all payments made to KundliAI.</p>
+            <p>Sidera is a digital Vedic astrology service with no physical goods. The service is free to try up to a set number of queries. After that, continuing requires a payment — a minimum amount applies, which varies by currency. You may always choose to contribute more. This policy covers all payments made to Sidera.</p>
           </section>
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">2. How Payments Work</h2>
             <p>Once your free queries are used, you will be asked to make a payment to continue using the service. A currency-specific minimum payment amount applies — this minimum exists to cover the operational costs of providing the service. There is no upper limit; you may contribute any amount at or above the minimum.</p>
-            <p className="mt-2">Each payment unlocks continued access to KundliAI's astrology services on WhatsApp.</p>
+            <p className="mt-2">Each payment unlocks continued access to Sidera's astrology services on WhatsApp.</p>
           </section>
 
           <section>
@@ -56,7 +56,7 @@ const RefundPolicy = () => {
             <p>To request a refund, email <a href="mailto:kundliaibot@gmail.com" className="text-accent hover:underline">kundliaibot@gmail.com</a> within 7 days of your payment, with the following details:</p>
             <ul className="list-disc pl-6 space-y-1 mt-2">
               <li>Subject line: <strong>"Refund Request"</strong></li>
-              <li>Your WhatsApp phone number (with country code) used with KundliAI</li>
+              <li>Your WhatsApp phone number (with country code) used with Sidera</li>
               <li>The amount, currency, and date of the payment</li>
               <li>A brief reason for the request</li>
             </ul>

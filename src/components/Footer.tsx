@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-8">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="KundliAI" width={36} height={36} className="rounded" />
-            <span className="font-display text-gradient-gold font-bold text-lg">KundliAI</span>
+            <img src={logo} alt="Sidera" width={36} height={36} className="rounded" />
+            <span className="font-display text-gradient-gold font-bold text-lg">Sidera</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-8 text-sm">
             <div>

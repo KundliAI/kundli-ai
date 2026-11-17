@@ -7,7 +7,7 @@ const steps = [
     icon: Mail,
     title: "Send a Deletion Request Email",
     description:
-      'Compose an email to kundliaibot@gmail.com with the subject line "Account Deletion Request." In the body of the email, include your WhatsApp phone number (with country code) that you used with Kundli AI, so we can identify your account.',
+      'Compose an email to kundliaibot@gmail.com with the subject line "Account Deletion Request." In the body of the email, include your WhatsApp phone number (with country code) that you used with Sidera, so we can identify your account.',
   },
   {
     icon: Clock,
@@ -39,8 +39,8 @@ const AccountDeletion = () => {
             <span className="text-sm">Back</span>
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <img src={logo} alt="Kundli AI" width={32} height={32} className="rounded-lg" />
-            <span className="font-display text-lg text-gradient-gold font-bold">Kundli AI</span>
+            <img src={logo} alt="Sidera" width={32} height={32} className="rounded-lg" />
+            <span className="font-display text-lg text-gradient-gold font-bold">Sidera</span>
           </div>
         </div>
       </nav>
@@ -88,8 +88,8 @@ const AccountDeletion = () => {
           <h2 className="font-display text-lg font-bold text-foreground mb-3">Important Notes</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Account deletion is <strong>permanent and irreversible</strong>. Once deleted, your data cannot be recovered.</li>
-            <li>After deletion, you will not receive any further messages from Kundli AI on WhatsApp.</li>
-            <li>If you wish to use Kundli AI again after deletion, you will need to start fresh as a new user.</li>
+            <li>After deletion, you will not receive any further messages from Sidera on WhatsApp.</li>
+            <li>If you wish to use Sidera again after deletion, you will need to start fresh as a new user.</li>
             <li>For any questions about the deletion process, feel free to email us at <a href="mailto:kundliaibot@gmail.com" className="text-accent hover:underline">kundliaibot@gmail.com</a>.</li>
           </ul>
         </div>

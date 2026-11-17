@@ -20,8 +20,8 @@ const ContactUs = () => {
             <span className="text-sm">Back</span>
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <img src={logo} alt="KundliAI" width={32} height={32} className="rounded-lg" />
-            <span className="font-display text-lg text-gradient-gold font-bold">KundliAI</span>
+            <img src={logo} alt="Sidera" width={32} height={32} className="rounded-lg" />
+            <span className="font-display text-lg text-gradient-gold font-bold">Sidera</span>
           </div>
         </div>
       </nav>
