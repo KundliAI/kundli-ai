@@ -12,8 +12,8 @@ const PrivacyPolicy = () => {
             <span className="text-sm">Back</span>
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <img src={logo} alt="KundliAI" width={32} height={32} className="rounded-lg" />
-            <span className="font-display text-lg text-gradient-gold font-bold">KundliAI</span>
+            <img src={logo} alt="Sidera" width={32} height={32} className="rounded-lg" />
+            <span className="font-display text-lg text-gradient-gold font-bold">Sidera</span>
           </div>
         </div>
       </nav>
@@ -23,13 +23,13 @@ const PrivacyPolicy = () => {
         <p className="text-muted-foreground text-sm mb-6">Last updated: {new Date().toLocaleDateString("en-IN", { year: "numeric", month: "long", day: "numeric" })}</p>
 
         <div className="bg-accent/5 border border-accent/20 rounded-lg p-4 mb-8 text-sm">
-          <strong>Legal Entity:</strong> KundliAI is a service provided by KUNDLI A I ONE IT INFRASTRUCTURE L.L.C.
+          <strong>Legal Entity:</strong> Sidera is a service provided by KUNDLI A I ONE IT INFRASTRUCTURE L.L.C.
         </div>
 
         <div className="prose-legal space-y-8 text-foreground/85 text-sm leading-relaxed">
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">1. Introduction</h2>
-            <p>This Privacy Policy explains how KundliAI ("we," "us," or "our") collects, uses, stores, shares, and protects your personal information when you use our specialized Vedic astrology service — delivered via WhatsApp and our website. By using our Service, you consent to the practices described in this policy.</p>
+            <p>This Privacy Policy explains how Sidera ("we," "us," or "our") collects, uses, stores, shares, and protects your personal information when you use our specialized Vedic astrology service — delivered via WhatsApp and our website. By using our Service, you consent to the practices described in this policy.</p>
           </section>
 
           <section>
@@ -37,7 +37,7 @@ const PrivacyPolicy = () => {
             <p>To provide personalized astrological readings, we collect the following information:</p>
             <ul className="list-disc pl-6 space-y-1 mt-2">
               <li><strong>Personal Information:</strong> Name, phone number (via WhatsApp), date of birth, time of birth, and place of birth — required to generate your Kundli</li>
-              <li><strong>Service Interactions:</strong> Messages exchanged with KundliAI on WhatsApp as part of requesting astrology readings and guidance</li>
+              <li><strong>Service Interactions:</strong> Messages exchanged with Sidera on WhatsApp as part of requesting astrology readings and guidance</li>
 <li><strong>Generated Content:</strong> Kundli charts, horoscope readings, and other astrological outputs generated for you</li>
             </ul>
           </section>
@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
 
           <section>
             <h2 className="font-display text-lg font-bold text-foreground mb-3">6. Cookies & Tracking</h2>
-            <p>Our website may use cookies and similar tracking technologies to improve your browsing experience and analyze site traffic. You can manage cookie preferences through your browser settings. The KundliAI WhatsApp service does not use cookies.</p>
+            <p>Our website may use cookies and similar tracking technologies to improve your browsing experience and analyze site traffic. You can manage cookie preferences through your browser settings. The Sidera WhatsApp service does not use cookies.</p>
           </section>
 
           <section>

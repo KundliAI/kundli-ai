@@ -3,7 +3,7 @@ import { ArrowLeft, Heart, MessageCircle, Sparkles } from "lucide-react";
 import logo from "@/assets/kundli-ai-logo.png";
 import WhatsAppIcon from "@/components/WhatsAppIcon";
 
-const WHATSAPP_LINK = "https://wa.me/916377943974?text=Hey%20KundliAI!";
+const WHATSAPP_LINK = "https://wa.me/916377943974?text=Hey%20Sidera!";
 
 const Pricing = () => {
   return (
@@ -15,8 +15,8 @@ const Pricing = () => {
             <span className="text-sm">Back</span>
           </Link>
           <div className="flex items-center gap-3 ml-auto">
-            <img src={logo} alt="KundliAI" width={32} height={32} className="rounded-lg" />
-            <span className="font-display text-lg text-gradient-gold font-bold">KundliAI</span>
+            <img src={logo} alt="Sidera" width={32} height={32} className="rounded-lg" />
+            <span className="font-display text-lg text-gradient-gold font-bold">Sidera</span>
           </div>
         </div>
       </nav>
@@ -38,7 +38,7 @@ const Pricing = () => {
             <div>
               <h3 className="font-display font-bold text-foreground mb-1">Start for free</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                KundliAI is free to try. Start a conversation on WhatsApp, share your birth details, and receive your first readings with no payment required.
+                Sidera is free to try. Start a conversation on WhatsApp, share your birth details, and receive your first readings with no payment required.
               </p>
             </div>
           </div>
@@ -50,7 +50,7 @@ const Pricing = () => {
             <div>
               <h3 className="font-display font-bold text-foreground mb-1">Continue with a purchase</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                After your free queries are used up, a minimum payment is required to continue. The minimum amount varies by currency to keep things fair across regions — you're always welcome to contribute more if you'd like. Every contribution helps keep KundliAI running and improving.
+                After your free queries are used up, a small minimum payment in Indian rupees (₹) is required to continue. You're always welcome to contribute more if you'd like. Every contribution helps keep Sidera running and improving. Sidera is for Indian (+91) WhatsApp numbers.
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const Pricing = () => {
             <div>
               <h3 className="font-display font-bold text-foreground mb-1">Why we do it this way</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Running an AI-powered astrology service has real costs — infrastructure, AI models, and ongoing development. We chose this model because we want KundliAI to be accessible to everyone, regardless of budget. Trust over transactions.
+                Running an AI-powered astrology service has real costs — infrastructure, AI models, and ongoing development. We chose this model because we want Sidera to be accessible to everyone, regardless of budget. Trust over transactions.
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ const Pricing = () => {
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-8 py-3 rounded-full font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform text-sm"
           >
             <WhatsAppIcon size={20} />
-            Try KundliAI for Free
+            Try Sidera for Free
           </a>
           <p className="text-muted-foreground text-xs mt-4">
             Questions about pricing? Email us at{" "}

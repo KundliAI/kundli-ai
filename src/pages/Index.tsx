@@ -4,7 +4,7 @@ import WhatsAppIcon from "@/components/WhatsAppIcon";
 import logo from "@/assets/kundli-ai-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const WHATSAPP_LINK = "https://wa.me/916377943974?text=Hey%20KundliAI!";
+const WHATSAPP_LINK = "https://wa.me/916377943974?text=Hey%20Sidera!";
 
 const features = [
   {
@@ -14,13 +14,13 @@ const features = [
   },
   {
     icon: Moon,
-    title: "Daily Horoscope",
-    description: "Receive accurate daily, weekly, and monthly predictions tailored to your zodiac sign.",
+    title: "Daily Guidance",
+    description: "Ask about today, this week or the months ahead, read from your own birth chart, not just your sign.",
   },
   {
     icon: Sparkles,
-    title: "Kundli Matching",
-    description: "Check compatibility for marriage with our precise Kundli matching analysis.",
+    title: "Marriage & Relationships",
+    description: "Ask when marriage is likely, what your chart says about a partner, and how family life looks ahead.",
   },
   {
     icon: Sun,
@@ -46,8 +46,8 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="KundliAI" width={48} height={48} className="rounded-lg" />
-            <span className="font-display text-xl text-gradient-gold font-bold">KundliAI</span>
+            <img src={logo} alt="Sidera" width={48} height={48} className="rounded-lg" />
+            <span className="font-display text-xl text-gradient-gold font-bold">Sidera</span>
           </div>
           <a
             href={WHATSAPP_LINK}
@@ -86,7 +86,7 @@ const Index = () => {
           <div className="animate-float mb-8">
             <img
               src={logo}
-              alt="KundliAI Logo"
+              alt="Sidera Logo"
               width={180}
               height={180}
               className="mx-auto drop-shadow-2xl"
@@ -94,7 +94,7 @@ const Index = () => {
           </div>
 
           <h1 className="font-display text-6xl md:text-8xl font-black mb-6 text-gradient-gold leading-tight">
-            KundliAI
+            Sidera
           </h1>
 
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-4 leading-relaxed">
@@ -121,7 +121,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-purple opacity-50" />
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="font-display text-4xl md:text-5xl font-black text-center mb-4 text-gradient-gold">
-            What KundliAI Offers
+            What Sidera Offers
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
             Ancient Jyotish wisdom, delivered straight to your WhatsApp.
@@ -157,7 +157,7 @@ const Index = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             {[
-              { step: "1", title: "Open WhatsApp", desc: "Tap the button to start a conversation with KundliAI" },
+              { step: "1", title: "Open WhatsApp", desc: "Tap the button to start a conversation with Sidera" },
               { step: "2", title: "Share Your Details", desc: "Provide your name, date, time, and place of birth" },
               { step: "3", title: "Receive Your Reading", desc: "Get your personalized Kundli and astrological insights instantly" },
             ].map((item) => (
@@ -181,7 +181,7 @@ const Index = () => {
             Ready to Know Your Stars?
           </h2>
           <p className="text-foreground/70 mb-10 text-lg">
-            Join thousands who trust KundliAI for daily Vedic astrology guidance.
+            Your first questions are free. Just say hello on WhatsApp.
           </p>
           <a
             href={WHATSAPP_LINK}
@@ -190,7 +190,7 @@ const Index = () => {
             className="inline-flex items-center gap-3 bg-gradient-gold text-accent-foreground px-10 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all glow-gold hover:scale-105 transform"
           >
             <WhatsAppIcon size={24} />
-            Chat with KundliAI
+            Chat with Sidera
           </a>
         </div>
       </section>
